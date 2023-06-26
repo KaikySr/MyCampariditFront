@@ -1,0 +1,27 @@
+<h1>
+    Nova Conta
+</h1>
+
+<label>Email</label>
+<br>
+<input type="text" [formControl]="email">
+<div *ngIf="email.invalid" style="color: red;">
+    <div *ngIf="email.errors?.['required']">
+        Insira um email.
+    </div>
+    <div *ngIf="email.errors?.['minlength']">
+        
+    </div>
+</div>
+
+<p>
+    <label>Username</label>
+    <br>
+    <input>
+</p>
+
+<app-create-password />
+
+<p>
+    <button>Criar Conta</button>
+</p>

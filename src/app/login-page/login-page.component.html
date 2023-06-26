@@ -1,0 +1,40 @@
+<div class="tela">
+    <div id="logAndNew">
+        <div id="cadastro">
+            <div class="content">
+                <img id="logo" src="../../assets/Logo.png">
+
+                <div class="linksRed">
+                    <b>Não possui uma conta?</b>
+                    <b><a routerLink="newaccount">Crie uma agora mesmo!</a></b>
+                </div>
+            </div>
+        </div>
+
+
+        <mat-card id="login">
+                <mat-card-content class="card">
+                        <h1 class="titulo">
+                            Login
+                        </h1>
+                        <p>
+                            <label>Email/Username</label>
+                            <br>
+                            <input [(ngModel)]="email">
+                        </p>
+
+                        <app-password [seePassword]="false" [breakLineOnInput]="true" (valueChanged)="passwordChanged($event)" />
+
+                        <button class="btnLogar" (click)="login()">Logar</button>
+                        
+            
+                    <router-outlet></router-outlet>
+                </mat-card-content>
+
+                <div class="linksRed">
+                    <b>Esqueceu sua senha?</b>
+                    <b><a href="{{'/recover/' + email}}">Recupere agora!</a></b>
+                </div>
+        </mat-card>
+    </div>
+</div>

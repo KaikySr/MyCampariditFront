@@ -1,0 +1,60 @@
+.nav 
+{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    box-shadow: 3px 3px 20px #BFC0C2;
+}
+
+.nav a 
+{
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+.nav a:hover 
+{
+    color: red;
+}
+
+#navLeft
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nome
+{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nome p
+{
+    color: red;
+}
+
+#navRight
+{
+    padding: 0.5rem;
+    display: flex;
+    position: relative;
+}
+
+i
+{
+    color: black;
+}
+
+i:hover
+{
+    color: rgb(128, 0, 0);
+}
+
