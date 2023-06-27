@@ -1,40 +1,57 @@
 <div class="tela">
+    
     <div id="logAndNew">
-        <div id="cadastro">
+
+        <!-- <div id="quadradoVermelho">
             <div class="content">
                 <img id="logo" src="../../assets/Logo.png">
+            </div>
+        </div> -->
 
-                <div class="linksRed">
-                    <b>Não possui uma conta?</b>
-                    <b><a routerLink="newaccount">Crie uma agora mesmo!</a></b>
+        <div id="cadastro">
+            <div class="content">
+                <div class="cads">
+
+                    <app-new-account-page></app-new-account-page>
+                    
                 </div>
             </div>
         </div>
 
+        <div id="login">
+            <div class="content">
+                <div class="logs">
 
-        <mat-card id="login">
-                <mat-card-content class="card">
-                        <h1 class="titulo">
-                            Login
-                        </h1>
-                        <p>
-                            <label>Email/Username</label>
-                            <br>
-                            <input [(ngModel)]="email">
-                        </p>
+                    <h1 class="titulo">
+                        Login
+                    </h1>
 
-                        <app-password [seePassword]="false" [breakLineOnInput]="true" (valueChanged)="passwordChanged($event)" />
+                    <p>
+                        <label>Email/Username</label>
+                        <br>
+                        <input [(ngModel)]="email">
+                    </p>
 
-                        <button class="btnLogar" (click)="login()">Logar</button>
-                        
-            
+                    <app-password [seePassword]="false" [breakLineOnInput]="true" (valueChanged)="passwordChanged($event)" />
+
+                    <button class="btnLogar" (click)="login()">Logar</button>
+                    
                     <router-outlet></router-outlet>
-                </mat-card-content>
 
-                <div class="linksRed">
-                    <b>Esqueceu sua senha?</b>
-                    <b><a href="{{'/recover/' + email}}">Recupere agora!</a></b>
+                    <div class="linksRed">
+                        <b>Esqueceu sua senha?</b>
+                        <b><a href="{{'/recover/' + email}}">Recupere agora!</a></b>
+                    </div>
+
+                    <div class="linksRed">
+                        <b>Não possui uma conta?</b>
+                        <b><a routerLink="newaccount">Crie uma agora mesmo!</a></b>
+                    </div>
                 </div>
-        </mat-card>
+            </div>       
+        </div>
     </div>
 </div>
+
+
+ 

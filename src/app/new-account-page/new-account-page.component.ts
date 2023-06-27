@@ -14,4 +14,8 @@ export class NewAccountPageComponent
     Validators.minLength(4)
   ]);
   
+  CriarConta() 
+  {
+    
+  }
 }

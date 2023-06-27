@@ -1,0 +1,42 @@
+#telaCad
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnCriar
+{
+    width: 5vw;
+    height: 3vh;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.btnCriar:hover
+{
+    background-color: rgb(128, 0, 0);
+    color: white;
+}
+
+.titulo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p
+{
+    display: block;
+    justify-content: center;
+}
+
+
+
+
+
+
+

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormControl, Validators } from '@angular/forms';
 
 
 @Component(
@@ -31,4 +32,6 @@ export class LoginPageComponent
       this.router.navigate(["/"])
     }
   }
+
+  
 }
