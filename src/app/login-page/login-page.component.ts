@@ -33,5 +33,10 @@ export class LoginPageComponent
     }
   }
 
+  NewAcc()
+  {
+    
+  }
+
   
 }

@@ -9,6 +9,8 @@ import { NewAccountPageComponent } from './new-account-page/new-account-page.com
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { RecoverPageComponent } from './recover-page/recover-page.component';
 import { MainComponent } from './main/main.component';
+import { AddPostComponent } from './add-post/add-post.component';
+import { CreateForumComponent } from './create-forum/create-forum.component';
 
 const routes: Routes = 
 [
@@ -16,6 +18,9 @@ const routes: Routes =
     path: '', component: MainComponent,
     children: [
       { path: '', component: HomePageComponent },
+      { path: 'addpost', component: AddPostComponent },
+      { path: 'createforum', component: CreateForumComponent },
+
     ]
   },
   { path: 'login', component: LoginPageComponent },

@@ -1,0 +1,63 @@
+.main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 92vh;
+}
+
+.createForum
+{
+    width: 40vw;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+
+    box-shadow: 3px 3px 20px #000000; ;
+}
+
+.img
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forumImg
+{
+
+}
+
+.nome
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nomeForum
+{
+
+}
+
+.descriacao
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+}
+
+.descricaoForum
+{
+    text-align: center;
+    width: fit-content;
+
+    width: 80%;
+}

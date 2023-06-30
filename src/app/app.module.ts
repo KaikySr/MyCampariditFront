@@ -21,6 +21,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MainComponent } from './main/main.component';
+import { AddPostComponent } from './add-post/add-post.component';
+import { CreateForumComponent } from './create-forum/create-forum.component';
+
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule(
@@ -37,6 +42,8 @@ import { MainComponent } from './main/main.component';
     NotFoundPageComponent,
     RecoverPageComponent,
     MainComponent,
+    AddPostComponent,
+    CreateForumComponent,
   ],
 
   imports: 
@@ -51,6 +58,7 @@ import { MainComponent } from './main/main.component';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    HttpClientModule,
   ],
 
   providers: [],

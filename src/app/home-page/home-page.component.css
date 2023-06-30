@@ -9,21 +9,84 @@
     width: 33vw;
 }
 
+.myforuns
+{
+    width: 20%;
+    height: 92vh;
+    position: fixed;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding-bottom: 20px; 
+}
+
+.forum
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    border: 1px solid black;   
+    height: 10vh;
+}
+
+.foto
+{
+    width: 20%;
+    height: fit-content;
+    border-radius: 15px;
+}
+
+.textos
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.nome
+{
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
 .mid
 {
     width: 33vw;
+    max-height: fit-content;
 }
+
+.example-card
+{
+    width: 100%;
+    height: fit-content;
+    margin-top: 2rem;
+}
+
+.post
+{
+    box-shadow: 3px 3px 20px #000000; 
+}
+
+
+
+
+
+
+
+
 
 .right
 {
     width: 33vw;
 }
 
-
-.example-card
-{
-    width: 100%;
-    height: fit-content;
-    margin-bottom: 2rem;
-}
 
