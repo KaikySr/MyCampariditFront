@@ -1,0 +1,32 @@
+<div class="tela">
+    
+    <div id="logAndNew">
+        <div id="cadastro" class="content">
+            <div class="logo" (click)="displayNovaConta()" *ngIf="!novaConta">
+                <div class="fundo">
+                    <img class="logoImg" src="./../../assets/Logo.png">
+                    <h1 *ngIf="!novaConta">Cadastrar</h1>
+                </div>
+            </div>
+
+            <div class="cads" *ngIf="novaConta" (click)="displayNovaConta()">
+                <app-new-account-page></app-new-account-page>
+            </div>
+        </div>
+        <div id="login" class="content" >
+            <div class="logo" (click)="displayLogin()" *ngIf="!loginn">
+                <div class="fundo">
+                    <img class="logoImg" src="./../../assets/Logo.png">
+                    <h1 *ngIf="!loginn">Logar</h1>
+                </div>
+            </div>
+
+            <div class="logs" *ngIf="loginn" (click)="displayLogin()">
+                <app-login-page-component></app-login-page-component>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ 

@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-post.component.css']
 })
 export class AddPostComponent {
-
+  
+  effect(text: string | null) 
+  {
+    alert(text)
+  }
+  
 }

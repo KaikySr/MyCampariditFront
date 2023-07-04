@@ -1,17 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormControl, Validators } from '@angular/forms';
 
-
-@Component(
-{
-  selector: 'app-login-page-component',
-  templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.css'],
+@Component({
+  selector: 'app-login-and-cadastro-page',
+  templateUrl: './login-and-cadastro-page.component.html',
+  styleUrls: ['./login-and-cadastro-page.component.css']
 })
-
-export class LoginPageComponent
-{
+export class LoginAndCadastroPageComponent {
   email = ""
   link = ""
   password = ""
@@ -21,6 +16,19 @@ export class LoginPageComponent
   passwordChanged(event: any)
   {
     this.password = event
+  }
+
+  novaConta : boolean = false
+  loginn : boolean = true
+
+  displayNovaConta = () => {
+    this.novaConta = true
+    this.loginn = false
+  }
+
+  displayLogin = () => {
+    this.loginn = true
+    this.novaConta = false
   }
 
   login() 

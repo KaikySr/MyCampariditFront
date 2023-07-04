@@ -3,15 +3,48 @@
 
     <div class="post">
 
-        <div class="user">
-            <img class="ftUser" src="">
-            <h2 class="nomeUser">Kaiky</h2>
+        <div class="publish">
+            <mat-icon class="voltar">arrow_back</mat-icon>
+            <button mat-raised-button class="publicar" color="warn">Publish</button>
         </div>
 
-        <div class="inputs">
-            <input class="titulo">
-            <input class="conteudo">
-            <input class="img">
+        <div class="user">
+            <img class="ftUser" src="../../assets/gatofeio.png">
+            <h2 class="nomeUser">Kaiky Sauro TRex</h2>
+        </div>
+
+        <div class="input">
+            <textarea class="conteudo" placeholder="Escreva aqui ..."></textarea> 
+        </div>
+
+        <div class="galeria">
+            <div (click)="effect('brincs')" class="opcs">
+                <button mat-mini-fab color="black">
+                    <mat-icon>gif_box</mat-icon>
+                </button>
+            </div>
+            <div (click)="effect('2ksdoa')" class="opcs">
+                <button mat-mini-fab color="black">
+                    <mat-icon>image_search</mat-icon>
+                </button>
+            </div>
+            <div (click)="effect('xisde')" class="opcs">
+                <button mat-mini-fab color="black" >
+                    <mat-icon>linked_camera</mat-icon>
+                </button>
+            </div>
         </div>
     </div>
 </div>
+
+<!-- 
+-->
+
+<!-- 
+-->
+
+    <!-- <span class="material-symbols-outlined">
+        person_search
+        </span> -->
+<!-- 
+        -->

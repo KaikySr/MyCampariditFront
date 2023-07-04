@@ -2,23 +2,27 @@
 {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 
     width: 100vw;
     height: 92vh;
+    margin: 0;
 }
 
 .createForum
 {
     width: 40vw;
     height: 80vh;
+    margin: 0;
 
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    
 
-    box-shadow: 3px 3px 20px #000000; ;
+    background-color: #000000;
+    color: white;
+
+    box-shadow: 3px 3px 20px #000000;
 }
 
 .img
@@ -30,7 +34,11 @@
 
 .forumImg
 {
-
+    height: fit-content;
+    width: fit-content;
+    border-radius: 100%;
+    border: 1px solid white;
+  
 }
 
 .nome
@@ -42,22 +50,60 @@
 
 .nomeForum
 {
-
+    background-color: #000000;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 .descriacao
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 
-    width: 80%;
 }
 
 .descricaoForum
 {
-    text-align: center;
-    width: fit-content;
+    width: 100%;
+    height: 30vh;
 
-    width: 80%;
+    font-size: 2rem;
+    background-color: #000000;
+    color: white;
+}
+
+
+.publish
+{
+    height: 2rem;
+    padding: 1rem;   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mat-mdc-button-touch-target
+{
+    width: 7rem;
+    height: 70%;
+}
+
+.voltar
+{
+    color:red;
+}
+
+.voltar:hover
+{
+    transform: scale(110%);
+    cursor: pointer;
+}
+
+.publicar
+{
+    background-color:red;
+    width: 7rem;
+    height: 100%;
 }

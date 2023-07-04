@@ -27,10 +27,10 @@
     text-decoration: none;
 }
 
-.nav a:hover 
+/* .nav a:hover 
 {
     color: red;
-}
+} */
 
 #navLeft
 {
@@ -52,10 +52,10 @@
     color: red;
 }
 
-.nome p:hover
+/* .nome p:hover
 {
     color: black;
-}
+} */
 
 #navRight
 {

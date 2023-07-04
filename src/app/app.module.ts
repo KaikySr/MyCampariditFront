@@ -12,6 +12,7 @@ import { NewAccountPageComponent } from './new-account-page/new-account-page.com
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { RecoverPageComponent } from './recover-page/recover-page.component';
 
+
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -25,6 +26,8 @@ import { AddPostComponent } from './add-post/add-post.component';
 import { CreateForumComponent } from './create-forum/create-forum.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ForumPageComponent } from './forum-page/forum-page.component';
+import { LoginAndCadastroPageComponent } from './login-and-cadastro-page/login-and-cadastro-page.component';
 
 
 
@@ -44,6 +47,8 @@ import { HttpClientModule } from '@angular/common/http';
     MainComponent,
     AddPostComponent,
     CreateForumComponent,
+    ForumPageComponent,
+    LoginAndCadastroPageComponent,
   ],
 
   imports: 

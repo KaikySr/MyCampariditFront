@@ -69,11 +69,14 @@
     width: 100%;
     height: fit-content;
     margin-top: 2rem;
+    box-shadow: 3px 3px 20px #000000; 
 }
 
-.post
+.cabecalho
 {
-    box-shadow: 3px 3px 20px #000000; 
+    display: flex;
+    align-items: center;
+    padding: 1rem;
 }
 
 
