@@ -14,65 +14,84 @@
       </div>
     </div>
   
-  
     <div class="mid">
-  
-      <div *ngFor="let post of posts;">
-        <mat-card class="card">
-  
-          <mat-card-header class="cabecalho">
-            <!-- 
-                <img mat-card-avatar src="{{post.fotoCriador}}" class="imageUser">
-             -->
-             <img mat-card-avatar src="../../assets/gatofeio.png" class="imageUser">
-            <mat-card-subtitle class="userName">@{{post.criador}}</mat-card-subtitle>
-            <mat-card-subtitle class="data">04 julho 12:00</mat-card-subtitle>
-            
-          </mat-card-header>
-  
-  
-          <mat-card-content>
-            <p>
-              {{post.conteudo}}
-            </p>
-          </mat-card-content>
+
+      <div class="cards">
+    
+        <div *ngFor="let post of posts;">
+          <mat-card class="card">
+    
+            <mat-card-header class="cabecalho">
+              <!-- 
+                  <img mat-card-avatar src="{{post.fotoCriador}}" class="imageUser">
+              -->
+              <img mat-card-avatar src="../../assets/gatofeio.png" class="imageUser">
+              <mat-card-subtitle class="userName">@{{post.criador}}</mat-card-subtitle>
+              <mat-card-subtitle class="data">04 julho 12:00</mat-card-subtitle>
+              
+            </mat-card-header>
+    
+    
+            <mat-card-content>
+              <p>
+                {{post.conteudo}}
+              </p>
+            </mat-card-content>
 
 
-          <img mat-card-image class="imgConteudo" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-  
+            <img mat-card-image class="imgConteudo" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    
 
-          <mat-card-actions class="footer">
-            <div class="reactions">
-                <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
-                    <mat-icon><span class="material-symbols-outlined">arrow_upward</span></mat-icon>
-                </button>
-                <button mat-icon-button aria-label="Example icon button with a open in new tab icon">
-                    <mat-icon><span class="material-symbols-outlined">arrow_downward</span></mat-icon>
-                </button>
-            </div>
-            <div class="NLikes">
-                <p>123.5K</p>
-            </div>
-          </mat-card-actions>
-  
-        </mat-card>
-      </div>
-  
-  
-    </div>
-  
-  
-    <div class="right">
-        <div class="members">
-            <b class="cargo">ADM</b>
-            <div *ngFor="let member of members;">
-                <div src="" class="member">
-                    <img class="fotoUser" src="../../assets/gatofeio.png">
-                    <b class="nomeUser">Kaiky Sauro Trex</b>
-                </div>
-            </div>
+            <mat-card-actions class="footer">
+              <div class="reactions">
+                  <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+                      <mat-icon><span class="material-symbols-outlined">arrow_upward</span></mat-icon>
+                  </button>
+                  <button mat-icon-button aria-label="Example icon button with a open in new tab icon">
+                      <mat-icon><span class="material-symbols-outlined">arrow_downward</span></mat-icon>
+                  </button>
+              </div>
+              <div class="NLikes">
+                  <p>123.5K</p>
+              </div>
+            </mat-card-actions>
+    
+          </mat-card>
         </div>
-    </div>
+      </div>
+
+      <div class="plus">
+        <button class="botaoMais" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>add</mat-icon>
+        </button>
+        <mat-menu class="menu" #menu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>history_edu</mat-icon>
+                <span>Criar um post</span>
+            </button>
+    
+            <button mat-menu-item>
+                <mat-icon>forum</mat-icon>
+                <span>Criar um forum</span>
+            </button>
+        </mat-menu>
+      </div>
+  </div>
+  
+  
+  <div class="right">
+      <div class="members">
+          <div class="cargo">
+            <b>ADM</b>
+          </div>
+          <div *ngFor="let member of members;">
+              <div src="" class="member">
+                  <img class="fotoUser" src="../../assets/gatofeio.png">
+                  <b class="nomeUser">Kaiky Sauro Trex</b>
+              </div>
+          </div>
+      </div>
+  </div>
 
 
 </div>

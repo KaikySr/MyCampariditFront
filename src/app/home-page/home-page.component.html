@@ -1,51 +1,104 @@
+
 <div class="main">
   <div class="left">
+    <div class="search">
+      <label>Procurar foruns:</label>
+      <input class="input" id="inputForum" [(ngModel)]="forumName" placeholder="Ex.. Cats Feios">
+      <button (click)="infoForum()">ir</button>
+      <!-- <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Assignee</mat-label>
+          <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option.name}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form> -->
+    </div>
+
     <div class="myforuns">
-      <div *ngFor="let post of posts;">
+      <div *ngFor="let f of forum;">
         <div src="" class="forum">
-          <img class="foto" src="../../assets/Logo.png">
+          <img class="fotoForum" src="../../assets/Logo.png">
           <div class="textos">
-            <b class="nome">Nome</b>
-            <p class="descricao">aqui vai uma pequena descrição do forum que eu iria pegar da descrição de quando o cria</p>
+            <b class="nomeForum" id="nomeForum">{{f.nome}}</b>
+            <p class="descricao">{{f.descricao}}</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-
   <div class="mid">
 
-    <div *ngFor="let post of posts;">
-      <mat-card class="example-card">
+    <div class="cards">
+  
+      <div *ngFor="let post of posts;">
+        <mat-card class="card">
+  
+          <mat-card-header class="cabecalho">
+            <!-- 
+                <img mat-card-avatar src="{{post.fotoCriador}}" class="imageUser">
+            -->
+            <img mat-card-avatar src="../../assets/gatofeio.png" class="imageUser">
+            <mat-card-subtitle class="userName">@{{post.criador}}</mat-card-subtitle>
+            <mat-card-subtitle class="data">04 julho 12:00</mat-card-subtitle>
+            
+          </mat-card-header>
+  
+  
+          <mat-card-content>
+            <p>
+              {{post.conteudo}}
+            </p>
+          </mat-card-content>
 
-        <mat-card-header class="cabecalho">
-          <img mat-card-avatar src="{{post.fotoCriador}}" class="example-header-image">
-          <mat-card-subtitle>@{{post.criador}}</mat-card-subtitle>
-          
-        </mat-card-header>
 
-        <!-- <img *ngIf="post.foto?" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+          <img mat-card-image class="imgConteudo" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  
 
-        <mat-card-content>
-          <p>
-            {{post.conteudo}}
-          </p>
-        </mat-card-content>
-
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>DESLIKE</button>
-        </mat-card-actions>
-
-      </mat-card>
+          <mat-card-actions class="footer">
+            <div class="reactions">
+                <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+                    <mat-icon><span class="material-symbols-outlined">arrow_upward</span></mat-icon>
+                </button>
+                <button mat-icon-button aria-label="Example icon button with a open in new tab icon">
+                    <mat-icon><span class="material-symbols-outlined">arrow_downward</span></mat-icon>
+                </button>
+            </div>
+            <div class="NLikes">
+                <p>123.5K</p>
+            </div>
+          </mat-card-actions>
+  
+        </mat-card>
+      </div>
     </div>
 
+    <div class="plus">
+      <button class="botaoMais" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>add</mat-icon>
+      </button>
+      <mat-menu class="menu" #menu="matMenu">
+          <button mat-menu-item>
+              <mat-icon>history_edu</mat-icon>
+              <span>Criar um post</span>
+          </button>
+  
+          <button mat-menu-item>
+              <mat-icon>forum</mat-icon>
+              <span>Criar um forum</span>
+          </button>
+      </mat-menu>
+    </div>
+</div>
 
-  </div>
+
+<div class="right">
+   
+</div>
 
 
-  <div class="right">
-
-  </div>
 </div>

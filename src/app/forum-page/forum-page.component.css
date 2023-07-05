@@ -1,215 +1,288 @@
-.main
-{
-    display: flex;
-    width: 100vw;
-    justify-content: space-between;
-    background-color: black;
-}
+ /* MAIN */
+ /* { */
+        .main
+        {
+            display: flex;
+            width: 100vw;
+            justify-content: space-between;
+            background-color: #111;
+            min-height: 100vh;
+        }
 
-
-
-.left
-{
-    width: 20%;
-    background-color: black;
-    color: white;
-    border-radius: 0 15px 15px 0;
-    box-shadow: 0 0 50px white;
-}
-
-.myforuns
-{
-    width: 20%;
-    height: 92vh;
-    position: fixed;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    padding-bottom: 2vh; 
-
-}
-
-.forum
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-    height: 10vh;
-
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.fotoForum
-{
-    width: 3rem;
-    height: 3rem;
-    border-radius: 100%;
-    border: 1px solid white;
-}
-
-.textos
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-
-    width: 100%;
-    height: 100%;
-}
-
-.nomeForum
-{
-   height: 30%;
-   display: flex;
-   align-items: center;
-}
-
-.descricao
-{
-    height: 70%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    width: 100%;
-}
-
-.forum:hover
-{
-    box-shadow: 3px 3px 20px #000000;
-}
-
-.forum:active
-{
-    background-color: rgb(199, 199, 199);
-}
+        ::-webkit-scrollbar 
+        {
+            width: 0px;
+        }
+/* } */
 
 
 
 
 
+/* LEFT */
+/* { */
+        .left
+        {
+            width: 20%;
+            background-color: #111;
+            color: white;
+            box-shadow: 0 0 50px white;
+        }
 
-.mid
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 40%;
-    max-height: fit-content;
-    gap: 3vh;
-    padding-bottom: 2vh; 
-}
+        .myforuns
+        {
+            width: 20%;
+            height: 92vh;
+            position: fixed;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
 
-.card
-{
-    width: 33vw;
-    height: fit-content;
-    
-    box-shadow: 0 0 12px white; 
-}
+        .forum
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+            height: 10vh;
 
-.imageUser
-{
-    margin: 0;
-    width: 50px;
-    height: 50px;
-}
+            gap: 1rem;
+            padding: 1rem;
+        }
 
-.userName
-{
-    font-size: 1.2rem;
-}
+        .fotoForum
+        {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 100%;
+            border: 1px solid white;
+        }
 
+        .textos
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
 
-.cabecalho
-{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    padding: 1rem;
-    
-}
+            width: 100%;
+            height: 100%;
+        }
 
-.imgConteudo
-{
-    padding: 1rem;
-}
+        .nomeForum
+        {
+        height: 30%;
+        display: flex;
+        align-items: center;
+        }
 
-.footer
-{
-    display: flex;
-    justify-content: space-between;
-}
+        .descricao
+        {
+            height: 70%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 100%;
+        }
 
-.NLikes
-{
-    padding: 1rem;
-}
+        .forum:hover
+        {
+            box-shadow: 3px 3px 20px white;
+            cursor: pointer;
+        }
 
-
-
-
-
-
-
-
-
-.right
-{
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px 0px 15px 0px;
-
-    background-color: black;
-    color: white;
-    box-shadow: 0 0 50px white;
-}
-
-.cargo
-{
-
-}
+        .forum:active
+        {
+            background-color: rgb(199, 199, 199);
+        }
+/* } */
 
 
-.members
-{
-    width: 20%;
-    height: 92vh;
-    position: fixed;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    padding: 1rem; 
-    display: flex;
-    flex-direction: column;
-    
 
 
-}
 
-.member
-{
-    display: flex;
-    align-items: center;
-    width: 100%;  
-    height: 6vh;
-    gap: 1rem;
-    padding: 1rem;
-    padding-left: 0;
-    
-}
+/* MID */
+/* { */
+        .mid
+        {
+            width: 40%;
+            display: flex;
+            position: relative;
+        }
 
-.fotoUser
-{
+        .cards
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-height: fit-content;
+            gap: 3vh;
+            padding-top: 2vh;
+            padding-bottom: 2vh; 
+        }
 
-    width: 3rem;
-    height: 3rem;
-    border-radius: 100%;
-    border: 1px solid white;
-}
+        .card
+        {
+            width: 33vw;
+            height: fit-content;
+            
+            box-shadow: 0 0 12px white; 
+        }
 
-.nomeUser
-{
-    height: 30%;
-}
+        .imageUser
+        {
+            margin: 0;
+            width: 50px;
+            height: 50px;
+        }
+
+        .userName
+        {
+            font-size: 1.2rem;
+        }
+
+        .cabecalho
+        {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding: 1rem;
+            
+        }
+
+        .imgConteudo
+        {
+            padding: 1rem;
+        }
+
+        .footer
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .NLikes
+        {
+            padding: 1rem;
+        }
+/* } */
+
+
+
+
+
+/* RIGHT */
+/* { */
+        .right
+        {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            background-color: #111;
+            color: white;
+            box-shadow: 0 0 50px white;
+        }
+
+        .cargo
+        {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .members
+        {
+            width: 20%;
+            height: 92vh;
+            position: fixed;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+        }
+
+        .member
+        {
+            display: flex;
+            align-items: center;
+            width: 100%;  
+            height: 6vh;
+            gap: 1rem;
+            padding: 1rem; 
+            padding-bottom: 0;
+            padding-top: 0;
+            
+        }
+
+        .member:hover
+        {
+            box-shadow: 3px 3px 20px white;
+            cursor: pointer;
+        }
+
+        .member:active
+        {
+            background-color: rgb(199, 199, 199);
+        }
+
+        .fotoUser
+        {
+
+            width: 3rem;
+            height: 3rem;
+            border-radius: 100%;
+            border: 1px solid white;
+        }
+
+        .nomeUser
+        {
+            height: 30%;
+        }
+/* } */
+
+
+
+
+
+/* MoreOptions */
+/* { */
+    .plus 
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        right: 25vw;
+        bottom: 2vh;
+        width: 10%;
+        z-index: 10;
+
+      
+    }
+
+    .botaoMais 
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+        background-color: red;
+        color: white;
+    }
+/* } */
+
+
+
+
+
+/* AddPost */
+/* { */
+
+
+
+/* } */
 
 

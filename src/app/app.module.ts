@@ -14,7 +14,7 @@ import { RecoverPageComponent } from './recover-page/recover-page.component';
 
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, FormControl} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
@@ -28,6 +28,15 @@ import { CreateForumComponent } from './create-forum/create-forum.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ForumPageComponent } from './forum-page/forum-page.component';
 import { LoginAndCadastroPageComponent } from './login-and-cadastro-page/login-and-cadastro-page.component';
+
+import {MatMenuModule} from '@angular/material/menu';
+import {MatTabsModule} from '@angular/material/tabs';
+
+import {NgFor, AsyncPipe} from '@angular/common';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 
 
@@ -64,6 +73,16 @@ import { LoginAndCadastroPageComponent } from './login-and-cadastro-page/login-a
     MatToolbarModule,
     MatIconModule,
     HttpClientModule,
+    MatMenuModule,
+    MatTabsModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
+    NgFor,
+    AsyncPipe,
+
   ],
 
   providers: [],

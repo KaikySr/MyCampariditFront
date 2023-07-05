@@ -17,18 +17,20 @@ const routes: Routes =
     path: '', component: MainComponent,
     children: [
       { path: '', component: HomePageComponent },
-      { path: 'addpost', component: AddPostComponent },
+      
       { path: 'createforum', component: CreateForumComponent },
       { path: 'forum', component: ForumPageComponent },
-
+      { path: 'addpost', component: AddPostComponent },
     ]
   },
   { path: 'loginandcadastro', component: LoginAndCadastroPageComponent },
 
   { path: 'newpassword', component: CreatePasswordComponent },
   { path: 'password', component: PasswordComponent },
-  { path: "recover/:email", title: "Recuperar Senha", component: RecoverPageComponent },
+
   { path: '**', component: NotFoundPageComponent },
+
+  { path: "recover/:email", title: "Recuperar Senha", component: RecoverPageComponent },
   { path: "recover", component: RecoverPageComponent },
 ];
 

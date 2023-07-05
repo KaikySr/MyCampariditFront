@@ -24,9 +24,13 @@ export class ForumPageComponent {
     this.service.get().subscribe(resp => this.posts = resp)
   }
 
-  
   infoPost2teste()
   {
     this.service.get().subscribe(resp => this.members = resp)
+  }
+
+  effect(text: string | null) 
+  {
+    alert(text)
   }
 }
