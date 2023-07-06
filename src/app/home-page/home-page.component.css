@@ -62,9 +62,9 @@
     {
         display: flex;
         justify-content: center;
-        align-items: center;   
+        align-items: top;   
         height: 10vh;
-
+ 
         gap: 1rem;
         padding: 1rem;
     }
