@@ -29,10 +29,21 @@
             box-shadow: 0 0 50px white;
         }
 
+        .search
+        {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            padding-bottom: 0;
+            position: fixed;
+            width: 18vw;
+        }
+
         .myforuns
         {
             width: 20%;
             height: 92vh;
+            margin-top: 8vh;
             position: fixed;
             overflow-x: hidden;
             box-sizing: border-box;

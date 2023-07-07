@@ -35,6 +35,8 @@
         flex-direction: column;
         padding: 1rem;
         padding-bottom: 0;
+        position: fixed;
+        width: 18vw;
     }
 
     .input
@@ -53,6 +55,7 @@
     {
         width: 20%;
         height: 92vh;
+        margin-top: 8vh;
         position: fixed;
         overflow-x: hidden;
         box-sizing: border-box;

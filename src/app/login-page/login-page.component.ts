@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, Validators } from '@angular/forms';
+import { user } from 'src/services/user';
+import { createUserDTO } from 'src/services/user';
+import { UserService } from 'src/services/userService';
 
 
 @Component(
@@ -12,9 +15,10 @@ import { FormControl, Validators } from '@angular/forms';
 
 export class LoginPageComponent
 {
-  email = ""
-  link = ""
-  password = ""
+  email: string = "";
+  username: string ="";
+  password: string = "";
+  service: any;
 
   constructor(private router: Router) { }
 
@@ -23,14 +27,30 @@ export class LoginPageComponent
     this.password = event
   }
 
-  login() 
-  {
-    // Aqui precisariamos fazer essa verificação no banco de dados
-    if (this.email == "don" && this.password == "123") {
-      // Isso evidentemente não é seguro, mas a ideia é bom e será melhorada no futuro
-      sessionStorage.setItem('user', 'donplatinado');
-      this.router.navigate(["/"])
-    }
-  }
+  // testee() 
+  // {
+  //   // Aqui precisariamos fazer essa verificação no banco de dados
+  //   if (this.email == UserService. && this.password == "123") {
+  //     // Isso evidentemente não é seguro, mas a ideia é bom e será melhorada no futuro
+  //     sessionStorage.setItem('user', 'donplatinado');
+  //     this.router.navigate(["/"])
+  //   }
+  // }
+
+  // Login() 
+  // {
+  //   var user: createUserDTO = {
+  //     email: this.email,
+  //     password: this.password,
+  //     username: this.username
+  //   }
+
+  //   this.service.login(user)
+  //      .subscribe((res) => {
+  //       console.log(res);
+  //      })
+
+  //   this.router.navigate(['/'])
+  // }
 
 }

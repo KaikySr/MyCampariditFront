@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 @Component({
   selector: 'app-create-password',
   templateUrl: './create-password.component.html',
@@ -6,7 +6,10 @@ import { Component, OnChanges, SimpleChanges } from '@angular/core';
 })
 export class CreatePasswordComponent {
   protected passStrong = Array(1);
-  protected password = "";
+
+  @Input() protected password = "";
+  @Output() valueChanged = new EventEmitter<string>();
+
   protected repeat = "";
   protected passClassify = "";
   protected repeatEqualToPass = true;
@@ -65,5 +68,8 @@ export class CreatePasswordComponent {
     this.password = event;
     this.updateStrongBar()
     this.updateRepeatCondition()
+    this.valueChanged.emit(this.password);
   }
+
+
 }

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { createUserDTO } from 'src/services/user';
+import { UserService } from 'src/services/userService';
 
 @Component({
   selector: 'app-new-account-page',
@@ -8,14 +11,29 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class NewAccountPageComponent 
 {
-  email = new FormControl('', [
-    Validators.required,
-    Validators.email,
-    Validators.minLength(4)
-  ]);
-  
+  constructor(private service: UserService, private router: Router) { };
+
+  email: string = "";
+  username: string = "";
+  senha: string = "";
+
+  passwordChanged(event: any) {
+    this.senha = event;
+  }
+
   CriarConta() 
   {
-    
+    var user: createUserDTO = {
+      email: this.email,
+      password: this.senha,
+      username: this.username
+    }
+
+    this.service.signUp(user)
+       .subscribe((res) => {
+        console.log(res);
+       })
+
+    this.router.navigate(['/'])
   }
 }

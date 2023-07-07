@@ -11,5 +11,11 @@ export class AddPostComponent {
   {
     alert(text)
   }
-  
+
+  conteudo: string = "";
+
+  postDoPost()
+  {
+    this
+  }
 }

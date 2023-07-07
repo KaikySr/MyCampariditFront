@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { user } from './user';
+import { createUserDTO, user } from './user';
 
 @Injectable({
   providedIn: 'root'
@@ -12,5 +12,13 @@ export class UserService {
   get()
   {
     return this.http.get<user[]>("http://localhost:5195/user")
+  }
+
+  signUp(data: createUserDTO) {
+    return this.http.post<user>("http://localhost:5195/user/signup", data);
+  }
+
+  login(data: createUserDTO){
+    return this.http.post<user>("http://localhost:5195/user/login", data);
   }
 }

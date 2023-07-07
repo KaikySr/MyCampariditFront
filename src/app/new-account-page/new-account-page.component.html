@@ -7,26 +7,16 @@
     <div>
         <label>Email</label>
         <br>
-        <input type="text" [formControl]="email">
-
-
-        <div *ngIf="email.invalid" style="color: red;">
-
-            <div *ngIf="email.errors?.['required']">
-                Insira um email.
-            </div>
-
-            <div *ngIf="email.errors?.['minlength']"></div>
-        </div>
+        <input type="text" [(ngModel)]="email" >
     </div>
 
     <p>
         <label>Username</label>
         <br>
-        <input>
+        <input type="text" [(ngModel)]="username">
     </p>
 
-    <app-create-password />
+    <app-create-password (valueChanged)="passwordChanged($event)" />
 
     <button class="btnCriar" (click)="CriarConta()">Criar</button>
 </div>

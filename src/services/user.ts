@@ -4,3 +4,8 @@ export interface user{
     usuario: string
 }
 
+export interface createUserDTO {
+    email: string;
+    username: string;
+    password: string;
+}

@@ -4,12 +4,12 @@
     <div class="search">
       <label>Procurar foruns:</label>
       <input class="input" id="inputForum" [(ngModel)]="forumName" placeholder="Ex.. Cats Feios">
-      <button (click)="infoForum()">ir</button>
+      <button (click)="infoForum()">Pesquisar</button>
     </div>
 
     <div class="myforuns">
       <div *ngFor="let f of forum;">
-        <div src="" class="forum">
+        <div routerLink="forum" class="forum">
           <img class="fotoForum" src="../../assets/Logo.png">
           <div class="textos">
             <b class="nomeForum" id="nomeForum">{{f.nome}}</b>
@@ -71,12 +71,12 @@
           <mat-icon>add</mat-icon>
       </button>
       <mat-menu class="menu" #menu="matMenu">
-          <button mat-menu-item>
+          <button routerLink="addpost" mat-menu-item>
               <mat-icon>history_edu</mat-icon>
               <span>Criar um post</span>
           </button>
   
-          <button mat-menu-item>
+          <button routerLink="createforum" mat-menu-item>
               <mat-icon>forum</mat-icon>
               <span>Criar um forum</span>
           </button>

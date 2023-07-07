@@ -1,18 +1,24 @@
 
 <div class="main">
-    <div class="left">
-      <div class="myforuns">
-        <div *ngFor="let post of posts;">
-          <div src="" class="forum">
-            <img class="fotoForum" src="../../assets/Logo.png">
-            <div class="textos">
-              <b class="nomeForum">Nome</b>
-              <p class="descricao">aqui vai a banana voadora que não onde pousar e por causa disso ela ta quebrando a porra da tela</p>
-            </div>
+  <div class="left">
+    <div class="search">
+      <label>Procurar foruns:</label>
+      <input class="input" id="inputForum" [(ngModel)]="forumName" placeholder="Ex.. Cats Feios">
+      <button (click)="infoForum()">Pesquisar</button>
+    </div>
+
+    <div class="myforuns">
+      <div *ngFor="let f of forum;">
+        <div routerLink="forum" class="forum">
+          <img class="fotoForum" src="../../assets/Logo.png">
+          <div class="textos">
+            <b class="nomeForum" id="nomeForum">{{f.nome}}</b>
+            <p class="descricao">{{f.descricao}}</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
   
     <div class="mid">
 
